@@ -1,28 +1,31 @@
 name: cicd
 
+# only run this workflow when something is pushed to main
 on:
   push:
     branches:
       - main
 
+# define our jobs
 jobs:
-  build:
-
+  build_and_test:
+    # define our OS
     runs-on: ubuntu-latest
 
+    # rely on predefined GitHub actions to setup our python environment
     steps:
     - uses: actions/checkout@v2
-
-    - name: Set up Python 3.8
+      # setup step
+    - name: setup
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
-
+        python-version: 3.9
+        # install step
     - name: install
       run: |
         python -m pip install --upgrade pip
         pip install pytest
-
+      # test step
     - name: test
       run: |
         pytest tests/

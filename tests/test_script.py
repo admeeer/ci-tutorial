@@ -2,9 +2,10 @@
 import subprocess
 
 def test_script_output(capfd):
+    # run the script file under a new process
     subprocess.run(['python', './script.py'])
     
-    # Capture the output
+    # Capture process output
     captured = capfd.readouterr()
 
     # Assert the output is correct
