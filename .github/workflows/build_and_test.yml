@@ -15,17 +15,17 @@ jobs:
     # rely on predefined GitHub actions to setup our python environment
     steps:
     - uses: actions/checkout@v2
-      # setup step
+      # setup python environment
     - name: setup
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-        # install step
+        # install prerequisite packages for testing
     - name: install
       run: |
         python -m pip install --upgrade pip
         pip install pytest
-      # test step
+      # run tests using pytest
     - name: test
       run: |
         pytest tests/
