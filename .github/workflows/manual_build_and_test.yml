@@ -1,10 +1,8 @@
 name: build-and-test-automation
 
-# only run this workflow when something is pushed to main
+# run this workflow manually on GitHub
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 # define our jobs
 jobs:
