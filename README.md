@@ -3,8 +3,8 @@
 
 
 
-#### Getting started
-These steps show you how to run the default workflow.
+### Getting started
+These steps show you how to run the default workflow and help get you used to interacting with GitHub Actions.
 - Fork the repository
    1. Navigate to the repository: `https://github.com/admeeer/cicd-tutorial`
    2. In the top right, click the dropdown next to `Fork` and click `Create a new fork`
@@ -16,7 +16,7 @@ These steps show you how to run the default workflow.
    1. Click the topmost workflow
    2. Success (hopefully!)
 
-#### Customizing the tests
+### Customizing the tests
 
 This tutorial assumes you have installed a Python interpreter and Git. See https://git-scm.com/ and https://www.python.org/downloads/ for further information.
 - Clone the repository
