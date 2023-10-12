@@ -1,4 +1,4 @@
-name: manual-build-and-test-automation
+name: manual-build-and-test
 
 # run this workflow manually on GitHub
 on:
