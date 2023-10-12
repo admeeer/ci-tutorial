@@ -12,18 +12,21 @@ These steps show you how to run the default workflow.
    1. Navigate to the `Actions` tab
    2. On the left, click on the `manual-build-and-test-automation` workflow
    3. On the right, click `Run workflow` and then `Run workflow`
+- Check the workflow success
+   1. Click the topmost workflow
+   2. Success (hopefully!)
 
 #### Customizing the tests
 
-This tutorial assumes you have installed Git and configured it. See https://git-scm.com/ for downloading & installing.
+This tutorial assumes you have installed a Python interpreter and Git. See https://git-scm.com/ and https://www.python.org/downloads/ for further information.
 - Clone the repository
   1. Run `git clone https://github.com/admeeer/cicd-tutorial.git`
 - Navigate to the cloned directory
   1. Run `cd cicd-tutorial`
 - Customize
-  1. Open `script.py` in your favorite text editor and edit the input in the `print` statement
+  1. Open `script.py` and edit the input in the `print` statement
   2. Navigate to the `tests/` folder, run `cd tests/`
-  3. Open `test_script.py` in your favorite text editor and edit the assert to your input
+  3. Open `test_script.py` and edit the assert to your input
 - Optionally, test locally
   1. Update pip, run `python3 -m pip install --upgrade pip`
   2. Then, run `pip3 install pytest`
