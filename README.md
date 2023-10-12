@@ -1,13 +1,20 @@
 # test-automation workflow tutorial
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+This tutorial is designed to get you up and running with GitHub Actions to automate your project's software lifecycle. GitHub Actions serve as a powerful tool for developers by automating the build, test, and deploy phases of an application.
+
+## Table of Contents
+- [Forking the repository and executing the default workflow](#forking-the-repository-and-executing-the-default-workflow)
+- [Personalizing the tests](#personalizing-the-tests)
+  - [The local way](#the-local-way)
 
 
-### Getting started
+## Forking the repository and executing the default workflow
 These steps show you how to run the default workflow and help get you used to interacting with GitHub Actions.
 - Fork the repository
    1. Navigate to the repository: `https://github.com/admeeer/cicd-tutorial`
    2. In the top right, click the dropdown next to `Fork` and click `Create a new fork`
+   3. Click `Create fork`
 - Run the workflow
    1. Navigate to the `Actions` tab
    2. On the left, click on the `manual-build-and-test-automation` workflow
@@ -16,9 +23,14 @@ These steps show you how to run the default workflow and help get you used to in
    1. Click the topmost workflow
    2. Success (hopefully!)
 
-### Customizing the tests
+## Personalizing the tests
 
+### The local way
 This tutorial assumes you have installed a Python interpreter and Git. See https://git-scm.com/ and https://www.python.org/downloads/ for further information.
+- Fork the repository
+  1. Navigate to the repository: `https://github.com/admeeer/cicd-tutorial`
+  2. In the top right, click the dropdown next to `Fork` and click `Create a new fork`
+  3. Click `Create fork`
 - Clone the repository
   1. Run `git clone https://github.com/admeeer/cicd-tutorial.git`
 - Navigate to the cloned directory
@@ -40,3 +52,4 @@ This tutorial assumes you have installed a Python interpreter and Git. See https
   2. On the left, click on the `build-and-test-automation` workflow
   3. Click the topmost workflow
   4. Success (hopefully!)
+
