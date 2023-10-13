@@ -8,6 +8,7 @@ This tutorial is designed to get you up and running with GitHub Actions to autom
 - [Executing the default workflow](#executing-the-default-workflow)
 - [Customizing output and test validation](#customizing-output-and-test-validation)
 - [Modifying the workflow to extract and archive artifacts](#modifying-the-workflow-to-extract-and-archive-artifacts)
+- [Workflow gists](#workflow-gists)
 
 ## Forking the repository
 First, you'll need to fork the repository - giving you a personal copy. 
@@ -57,4 +58,43 @@ These steps show you how to clone the repository onto your local machine, person
   4. Success (hopefully!)
 
 ## Modifying the workflow to extract and archive artifacts
+
+These steps run you through modifying the tests and default workflow to capture pytest output to a file and then upload that output as artifacts to GitHub. This tutorial assumes you have forked the repository.
+
+- Open the workflow
+  1. Navigate to repository and open the default workflow file, `.github/build_and_test.yml`.
+- Direct pytests output to a file
+  1. Under the `test` step, change `pytest -v tests/` to `pytest -v tests/ | tee tests/test_output.txt`. This will tell pytest to direct its output to both the console AND an output file in tests/test_output.txt.
+- Add a new step
+  1. Investigate the other steps and then create one under the last step, `test`. Add a keyword `name:` and name the new step `upload test artifacts`. This step should be completely under the `test` step and its instructions. It should be similar to this:
+  
+![image](https://github.com/admeeer/cicd-tutorial/assets/6462261/76281de5-aad4-40a4-83ab-d74aa2e6c069)
+
+  3. Under the `name` of the step, add another keyword called `uses:`. Here, we'll use a predefined GitHub Action that uploads artifacts based on a few parameters that we'll set. Add `actions/upload-artifact@v2` to the right of the keyword. Your new step should be similar to this:
+
+![image](https://github.com/admeeer/cicd-tutorial/assets/6462261/6ba1dbf4-ac7d-4285-8b20-b0de554b0f31)
+
+  5. Under the `uses` of the step, add another keyword called `with`. This keyword defines the parameters of our artifacts. Under `with`, add two indented keywords, `name` and `path`. Set the `name` to something like `test-output`, this will be the name of the artifacts generated. Set `path` to `tests/test_output.txt`. Your step is now completed and with luck, looks something like this:
+
+![image](https://github.com/admeeer/cicd-tutorial/assets/6462261/b17b84e0-b9dc-4933-8d9e-2b3fdfd90c3a)
+
+- Commit your changes
+  1. In the top right of the web browser, click `Commit changes`. Add a descriptive commit message, like `Added artifact extraction and capture to workflow` and then click `Commit changes`.
+- Check the workflows success
+  1. Navigate to the `Actions` tab
+  2. On the left, click on the `build-and-test-automation` workflow
+  3. Click the topmost workflow
+  4. Success (hopefully!)
+
+
+
+
+
+
+
+## Workflow gists
+
+**Stuck?** These gists are what your workflows should look like. 
+- **The default workflow** https://gist.github.com/admeeer/4e449981a730fa016d0780a335b9248d
+- **The extended workflow with artifact extraction and archival** https://gist.github.com/admeeer/383f82bbdfdc5fe5f5998e7657945c95
 
