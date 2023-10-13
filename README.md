@@ -4,17 +4,21 @@
 This tutorial is designed to get you up and running with GitHub Actions to automate your project's software lifecycle. GitHub Actions versatility extend much further, but this tutorial focuses specifically on automating the build and test phases of an application.
 
 ## Table of Contents
-- [Forking the repository and executing the default workflow](#forking-the-repository-and-executing-the-default-workflow)
-- [Personalizing the tests](#personalizing-the-tests)
-  - [The local way](#the-local-way)
+- [Forking the repository](#forking-the-repository)
+- [Executing the default workflow](#executing-the-default-workflow)
+- [Customizing output and test validation](#customizing-output-and-test-validation)
 
+## Forking the repository
+First, you'll need to fork the repository - giving you a personal copy. 
 
-## Forking the repository and executing the default workflow
-These steps show you how to run the default workflow and help get you used to interacting with GitHub Actions.
 - Fork the repository
    1. Navigate to the repository: `https://github.com/admeeer/cicd-tutorial`
    2. In the top right, click the dropdown next to `Fork` and click `Create a new fork`
    3. Click `Create fork`
+
+## Executing the default workflow
+These steps show you how to run the default workflow and help get you used to interacting with GitHub Actions. This tutorial assumes you have forked the repository. 
+
 - Run the workflow
    1. Navigate to the `Actions` tab
    2. On the left, click on the `manual-build-and-test-automation` workflow
@@ -23,14 +27,12 @@ These steps show you how to run the default workflow and help get you used to in
    1. Click the topmost workflow
    2. Success (hopefully!)
 
-## Personalizing the tests
+## Customizing output and test validation
 
-### The local way
-This tutorial assumes you have installed a Python interpreter and Git. See https://git-scm.com/ and https://www.python.org/downloads/ for further information.
-- Fork the repository
-  1. Navigate to the repository: `https://github.com/admeeer/cicd-tutorial`
-  2. In the top right, click the dropdown next to `Fork` and click `Create a new fork`
-  3. Click `Create fork`
+These steps show you how to clone the repository onto your local machine, personalize the output and test validation, and then push your changes up to your GitHub fork. After, we'll view the workflow executing your new changes.
+
+**The ocky way**. This tutorial assumes you have forked the repository and installed a Python interpreter and Git. See https://git-scm.com/ and https://www.python.org/downloads/ for further information. 
+
 - Clone the repository
   1. Run `git clone https://github.com/admeeer/cicd-tutorial.git`
 - Navigate to the cloned directory
