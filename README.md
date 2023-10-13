@@ -7,6 +7,7 @@ This tutorial is designed to get you up and running with GitHub Actions to autom
 - [Forking the repository](#forking-the-repository)
 - [Executing the default workflow](#executing-the-default-workflow)
 - [Customizing output and test validation](#customizing-output-and-test-validation)
+- [Modifying the workflow to extract and archive artifacts](#modifying-the-workflow-to-extract-and-archive-artifacts)
 
 ## Forking the repository
 First, you'll need to fork the repository - giving you a personal copy. 
@@ -54,4 +55,6 @@ These steps show you how to clone the repository onto your local machine, person
   2. On the left, click on the `build-and-test-automation` workflow
   3. Click the topmost workflow
   4. Success (hopefully!)
+
+## Modifying the workflow to extract and archive artifacts
 
