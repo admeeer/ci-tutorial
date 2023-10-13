@@ -21,4 +21,4 @@ jobs: # A job is a set of steps that execute on the same runner, a small remote 
         pip3 install pytest
     - name: test # Define a step, 'test', that runs our testing framework
       run: | # Run these bash commands
-        pytest tests/
+        pytest -v tests/
