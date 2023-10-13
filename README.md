@@ -84,13 +84,10 @@ These steps run you through modifying the tests and default workflow to capture 
   1. Navigate to the `Actions` tab
   2. On the left, click on the `build-and-test-automation` workflow
   3. Click the topmost workflow
-  4. Success (hopefully!)
-
-
-
-
-
-
+  4. Wait for the workflow to finish.
+  5. Scroll down and wait for the artifacts to upload.
+  6. Success! (hopefully!)
+- Did the workflow not succeed or are you stuck? See **Workflow gists** to review the workflow.
 
 ## Workflow gists
 
