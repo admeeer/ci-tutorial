@@ -1,5 +1,5 @@
 # test-automation workflow tutorial
-![Workflow](https://github.com/admeeer/cicd-tutorial/actions/workflows/build_and_test.yml/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Workflow](https://github.com/admeeer/ci-tutorial/actions/workflows/build_and_test.yml/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This tutorial is designed to get you up and running with GitHub Actions to automate your project's software lifecycle. GitHub Actions versatility extend much further, but this tutorial focuses specifically on automating the build and test phases of an application.
 
